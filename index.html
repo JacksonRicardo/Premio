@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>
+        document.getElementById("btnLinkedIn").addEventListener("click", function() {
+            // Compartilhar no LinkedIn
+            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
+            window.open(linkedinURL, "_blank");
+          });
+          
+          document.getElementById("btnFacebook").addEventListener("click", function() {
+            // Compartilhar no Facebook
+            var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href) + "&picture=" + encodeURIComponent(this.getAttribute("data-image"));
+            window.open(facebookURL, "_blank");
+          });          
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,5 +21,7 @@
 </head>
 <body>
     <h1>Primeiro lugar</h1>
+    <button id="btnLinkedIn" data-image="https://sway.office.com/5Bo2BcdJ7xZfGZiD">Compartilhar no LinkedIn</button>
+    <button id="btnFacebook" data-image="https://sway.office.com/5Bo2BcdJ7xZfGZiD">Compartilhar no Facebook</button>
 </body>
 </html>
