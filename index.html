@@ -29,7 +29,7 @@
     <script>
         document.getElementById("btnLinkedIn").addEventListener("click", function() {
             // Compartilhar no LinkedIn
-            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&title=" + encodeURIComponent("Primeiro lugar") + "&summary=" + encodeURIComponent("Card do evento") + "&source=" + encodeURIComponent(window.location.href) + "&mini=true" + "&images[0]=" + encodeURIComponent(this.getAttribute("data-image"));
+            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&title=" + encodeURIComponent("Primeiro lugar") + "&source=" + encodeURIComponent(window.location.href) + "&mini=true" + "&images[0]=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(linkedinURL, "_blank");
         });
           
@@ -45,5 +45,6 @@
             window.open(twitterURL, "_blank");
         });        
     </script>
+
 </body>
 </html>
