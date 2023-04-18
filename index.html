@@ -29,13 +29,13 @@
     <script>
         document.getElementById("btnLinkedIn").addEventListener("click", function() {
             // Compartilhar no LinkedIn
-            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&title=" + encodeURIComponent("Primeiro lugar") + "&summary=" + encodeURIComponent("Card do evento") + "&source=" + encodeURIComponent(window.location.href) + "&mini=true" + "&images[0]=" + encodeURIComponent(this.getAttribute("data-image"));
+            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=&media=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(linkedinURL, "_blank");
         });
           
         document.getElementById("btnFacebook").addEventListener("click", function() {
             // Compartilhar no Facebook
-            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?mini=true&url=" + encodeURIComponent(window.location.href) + "&title=" + encodeURIComponent("Primeiro lugar") + "&summary=" + encodeURIComponent("Card do evento") + "&source=" + encodeURIComponent(window.location.href) + "&images[0]=" + encodeURIComponent(this.getAttribute("data-image"));
+            var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href);
             window.open(facebookURL, "_blank");
         });
         
@@ -44,6 +44,8 @@
             var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location.href) + "&text=" + encodeURIComponent("") + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(twitterURL, "_blank");
         });        
+   
+      
     </script>
 </body>
 </html>
