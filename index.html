@@ -14,6 +14,7 @@
     <h1>Primeiro lugar</h1>
     <button id="btnLinkedIn" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no LinkedIn</button>
     <button id="btnFacebook" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no Facebook</button>
+    <button id="btnTwitter" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no Twitter</button>
     <script>
         document.getElementById("btnLinkedIn").addEventListener("click", function() {
             // Compartilhar no LinkedIn
@@ -25,6 +26,12 @@
             // Compartilhar no Facebook
             var facebookURL = "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[images][0]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[title]=" + encodeURIComponent("") + "&p[summary]=" + encodeURIComponent("");
             window.open(facebookURL, "_blank");
+        });
+        
+        document.getElementById("btnTwitter").addEventListener("click", function() {
+            // Compartilhar no Twitter
+            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location.href) + "&text=" + encodeURIComponent("Confira essa imagem!") + "&via=" + encodeURIComponent("usuario");
+            window.open(twitterURL, "_blank");
         });
     </script>
 </body>
