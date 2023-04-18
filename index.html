@@ -17,15 +17,15 @@
     <script>
         document.getElementById("btnLinkedIn").addEventListener("click", function() {
             // Compartilhar no LinkedIn
-            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&mini=true";
+            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(linkedinURL, "_blank");
-        });
-    
-        document.getElementById("btnFacebook").addEventListener("click", function() {
+          });
+          
+          document.getElementById("btnFacebook").addEventListener("click", function() {
             // Compartilhar no Facebook
-            var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href) + "&quote=";
+            var facebookURL = "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[images][0]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[title]=" + encodeURIComponent("") + "&p[summary]=" + encodeURIComponent("");
             window.open(facebookURL, "_blank");
-        });  
+          });          
     </script>
 </body>
 </html>
