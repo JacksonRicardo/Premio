@@ -12,22 +12,14 @@
 </head>
 <body>
     <h1>Primeiro lugar</h1>
-    <button id="btnLinkedIn" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no LinkedIn</button>
     <button id="btnFacebook" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no Facebook</button>
     <script>
-        document.getElementById("btnLinkedIn").addEventListener("click", function() {
-            // Compartilhar no LinkedIn
-            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
-            window.open(linkedinURL, "_blank");
-          });
-          
         document.getElementById("btnFacebook").addEventListener("click", function() {
             // Compartilhar no Facebook
             var facebookURL = "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[images][0]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[title]=" + encodeURIComponent("") + "&p[summary]=" + encodeURIComponent("");
             window.open(facebookURL, "_blank");
           });
           
-      
     </script>
 </body>
 </html>
