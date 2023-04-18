@@ -38,9 +38,9 @@
         
         document.getElementById("btnTwitter").addEventListener("click", function() {
             // Compartilhar no Twitter
-            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(document.querySelector('meta[property="og:image"]').getAttribute("content")) + "&text=" + encodeURIComponent("");
+            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location.href) + "&text=" + encodeURIComponent("") + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(twitterURL, "_blank");
-        });
+        });        
     </script>
 </body>
 </html>
