@@ -25,7 +25,7 @@
     <!--Compartilhamento das imagens nas redes sociais-->
     <button id="btnLinkedIn" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.png">Compartilhar no LinkedIn</button>
     <button id="btnFacebook" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.png">Compartilhar no Facebook</button> 
-    <button id="btnTwitter" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.png">Compartilhar no Twitter</button>
+    <button id="btnTwitter" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.png" data-url="https://primeirolugar.netlify.app/imagens/primeirolugar.png">Compartilhar no Twitter</button>
     <script>
         document.getElementById("btnLinkedIn").addEventListener("click", function() {
             // Compartilhar no LinkedIn
@@ -41,9 +41,10 @@
         
         document.getElementById("btnTwitter").addEventListener("click", function() {
             // Compartilhar no Twitter
-            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location.href) + "&text=" + encodeURIComponent("") + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
+            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(this.getAttribute("data-url")) + "&text=" + encodeURIComponent("") + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(twitterURL, "_blank");
-        });        
+        });
+               
     </script>
 </body>
 </html>
