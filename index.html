@@ -19,13 +19,13 @@
             // Compartilhar no LinkedIn
             var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&mini=true";
             window.open(linkedinURL, "_blank");
-          });
-          
-          document.getElementById("btnLinkedIn").addEventListener("click", function() {
-            // Compartilhar no LinkedIn
-            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&media=" + encodeURIComponent(this.getAttribute("data-image")) + "&mini=true";
-            window.open(linkedinURL, "_blank");
-          });          
+        });
+    
+        document.getElementById("btnFacebook").addEventListener("click", function() {
+            // Compartilhar no Facebook
+            var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(window.location.href) + "&quote=";
+            window.open(facebookURL, "_blank");
+        }); 
     </script>
 </body>
 </html>
