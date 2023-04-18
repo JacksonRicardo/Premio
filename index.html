@@ -14,32 +14,32 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Primeiro lugar">
     <meta name="twitter:description" content="Card do evento">
-    <meta name="twitter:image" content="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">
+    <meta name="twitter:image" content="imagens/primeirolugar.jpeg">
     <meta name="twitter:url" content="https://marcosatrigueiro.com.br">
     
 </head>
 <body>
     <h1>Primeiro lugar</h1>
     <img src="imagens/primeirolugar.jpeg" alt="Primeiro lugar">
-    <button id="btnLinkedIn" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no LinkedIn</button>
-    <button id="btnFacebook" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no Facebook</button>
-    <button id="btnTwitter" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no Twitter</button>
+    <button id="btnLinkedIn" data-url="https://marcosatrigueiro.com.br">Compartilhar no LinkedIn</button>
+    <button id="btnFacebook" data-image="imagens/primeirolugar.jpeg">Compartilhar no Facebook</button>
+    <button id="btnTwitter" data-image="imagens/primeirolugar.jpeg">Compartilhar no Twitter</button>
     <script>
         document.getElementById("btnLinkedIn").addEventListener("click", function() {
             // Compartilhar no LinkedIn
-            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href);
+            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(this.getAttribute("data-url"));
             window.open(linkedinURL, "_blank");
         });
           
         document.getElementById("btnFacebook").addEventListener("click", function() {
             // Compartilhar no Facebook
-            var facebookURL = "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[images][0]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[title]=" + encodeURIComponent("") + "&p[summary]=" + encodeURIComponent("");
+            var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(facebookURL, "_blank");
         });
         
         document.getElementById("btnTwitter").addEventListener("click", function() {
             // Compartilhar no Twitter
-            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location.href) + "&text=" + encodeURIComponent("") + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
+            var twitterURL = "https://twitter.com/intent/tweet?text=Primeiro%20lugar&url=https://marcosatrigueiro.com.br&hashtags=primeirolugar&via=marcosatrigueiro&media=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(twitterURL, "_blank");
         });        
     </script>
