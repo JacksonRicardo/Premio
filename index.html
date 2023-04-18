@@ -17,7 +17,7 @@
     <script>
         document.getElementById("btnLinkedIn").addEventListener("click", function() {
             // Compartilhar no LinkedIn
-            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
+            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&mini=true";
             window.open(linkedinURL, "_blank");
           });
           
