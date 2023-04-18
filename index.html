@@ -33,7 +33,7 @@
           
         document.getElementById("btnFacebook").addEventListener("click", function() {
             // Compartilhar no Facebook
-            var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(this.getAttribute("data-image"));
+            var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(this.getAttribute("data-url"));
             window.open(facebookURL, "_blank");
         });
         
