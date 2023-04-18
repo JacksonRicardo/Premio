@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url" content="https://primeirolugar.netlify.app" />
-    <meta property="og:image" content="https://primeirolugar.netlify.app/imagens/primeirolugar.png" />
+    <meta property="og:url" content="https://marcosatrigueiro.com.br" />
+    <meta property="og:image" content="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="627" />
     <meta property="og:description" content="" />
@@ -14,32 +14,32 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Primeiro lugar">
     <meta name="twitter:description" content="Card do evento">
-    <meta name="twitter:image" content="imagens/primeirolugar.png">
-    <meta name="twitter:url" content="https://primeirolugar.netlify.app">
+    <meta name="twitter:image" content="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">
+    <meta name="twitter:url" content="https://marcosatrigueiro.com.br">
     
 </head>
 <body>
     <h1>Primeiro lugar</h1>
-    <img src="imagens/primeirolugar.png" alt="Primeiro lugar">
-    <button id="btnLinkedIn" data-url="https://primeirolugar.netlify.app/imagens/primeirolugar.png">Compartilhar no LinkedIn</button>
-    <button id="btnFacebook" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.png">Compartilhar no Facebook</button>
-    <button id="btnTwitter" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.png">Compartilhar no Twitter</button>
+    <img src="imagens/primeirolugar.jpeg" alt="Primeiro lugar">
+    <button id="btnLinkedIn" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no LinkedIn</button>
+    <button id="btnFacebook" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no Facebook</button>
+    <button id="btnTwitter" data-image="https://marcosatrigueiro.com.br/wp-content/uploads/2021/02/Marcosa.png">Compartilhar no Twitter</button>
     <script>
         document.getElementById("btnLinkedIn").addEventListener("click", function() {
             // Compartilhar no LinkedIn
-            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(this.getAttribute("data-url"));
+            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href);
             window.open(linkedinURL, "_blank");
         });
           
         document.getElementById("btnFacebook").addEventListener("click", function() {
             // Compartilhar no Facebook
-            var facebookURL = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(this.getAttribute("data-url"));
+            var facebookURL = "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[images][0]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[title]=" + encodeURIComponent("") + "&p[summary]=" + encodeURIComponent("");
             window.open(facebookURL, "_blank");
         });
         
         document.getElementById("btnTwitter").addEventListener("click", function() {
             // Compartilhar no Twitter
-            var twitterURL = "https://twitter.com/intent/tweet?text=Primeiro%20lugar&url=https://marcosatrigueiro.com.br&hashtags=primeirolugar&via=marcosatrigueiro&media=" + encodeURIComponent(this.getAttribute("data-image"));
+            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location.href) + "&text=" + encodeURIComponent("") + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(twitterURL, "_blank");
         });        
     </script>
