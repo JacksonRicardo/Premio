@@ -30,7 +30,7 @@
         
         document.getElementById("btnTwitter").addEventListener("click", function() {
             // Compartilhar no Twitter
-            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(window.location.href) + "&text=" + encodeURIComponent("Confira essa imagem!") + "&via=" + encodeURIComponent("usuario");
+            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(this.getAttribute("data-image")) + "&text=" + encodeURIComponent("Confira essa imagem!");
             window.open(twitterURL, "_blank");
         });
     </script>
