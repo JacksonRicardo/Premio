@@ -14,6 +14,8 @@
     <h1>Primeiro lugar</h1>
     <button id="btnLinkedIn" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.jpeg">Compartilhar no LinkedIn</button>
     <button id="btnFacebook" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.jpeg">Compartilhar no Facebook</button>
+    <button id="btnInstagram" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.jpeg">Compartilhar no Instagram</button>
+
     <script>
         document.getElementById("btnLinkedIn").addEventListener("click", function() {
             // Compartilhar no LinkedIn
@@ -21,11 +23,13 @@
             window.open(linkedinURL, "_blank");
           });
           
-          document.getElementById("btnFacebook").addEventListener("click", function() {
+        document.getElementById("btnFacebook").addEventListener("click", function() {
             // Compartilhar no Facebook
             var facebookURL = "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[images][0]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[title]=" + encodeURIComponent("") + "&p[summary]=" + encodeURIComponent("");
             window.open(facebookURL, "_blank");
-          });          
+          });
+          
+      
     </script>
 </body>
 </html>
