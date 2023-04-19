@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:url" content="https://primeirolugar.netlify.app" />
+    <meta property="og:image" content="https://primeirolugar.netlify.app/imagens/primeirolugar.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:description" content="Card do evento" />
+
+    <!-- Adicione as seguintes meta tags para compartilhar a imagem no Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Primeiro lugar">
+    <meta name="twitter:description" content="Card do evento">
+    <meta name="twitter:image" content="https://primeirolugar.netlify.app/imagens/primeirolugar.png">
+    <meta name="twitter:url" content="https://primeirolugar.netlify.app">
+    
+</head>
+<body>
+    <h1>Primeiro lugar</h1>
+    <img src="imagens/primeirolugar.png" alt="Primeiro lugar">
+
+    <!--Compartilhamento das imagens nas redes sociais-->
+    <button id="btnLinkedIn" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.png">Compartilhar no LinkedIn</button>
+    <button id="btnFacebook" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.png">Compartilhar no Facebook</button> 
+    <button id="btnTwitter" data-image="https://primeirolugar.netlify.app/imagens/primeirolugar.png" data-url="https://primeirolugar.netlify.app">Compartilhar no Twitter</button>
+    <script>
+        document.getElementById("btnLinkedIn").addEventListener("click", function() {
+            // Compartilhar no LinkedIn
+            var linkedinURL = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(window.location.href) + "&title=" + encodeURIComponent("Primeiro lugar") + "&source=" + encodeURIComponent(window.location.href) + "&mini=true" + "&images[0]=" + encodeURIComponent(this.getAttribute("data-image"));
+            window.open(linkedinURL, "_blank");
+        });
+          
+        document.getElementById("btnFacebook").addEventListener("click", function() {
+            // Compartilhar no Facebook
+            var facebookURL = "https://www.facebook.com/sharer/sharer.php?s=100&p[url]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[images][0]=" + encodeURIComponent(this.getAttribute("data-image")) + "&p[title]=" + encodeURIComponent("") + "&p[summary]=" + encodeURIComponent("");
+            window.open(facebookURL, "_blank");
+        });
+        
+        document.getElementById("btnTwitter").addEventListener("click", function() {
+            // Compartilhar no Twitter
+            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(this.getAttribute("data-url")) + "&text=" + encodeURIComponent("") + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
+            window.open(twitterURL, "_blank");
+        });
+               
+    </script>
+</body>
+</html>

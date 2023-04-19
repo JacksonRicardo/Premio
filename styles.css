@@ -1,0 +1,47 @@
+:root{
+    --verde-principal: #30BFAB;
+    --rosa: #DB2CD2;
+    --branco: #ffffff;
+    --preto: #343434;
+    }
+    .medalha{
+        border-image-width: 5%;
+        width: 60%;
+    }
+    .div{
+        padding-left: 35rem ;
+        display: flex;
+        justify-content: center; /* center the content horizontally */
+        height: 100vh; /* set the height to 100% of the viewport height */
+        display: flex;
+        align-items: center;
+        width: 25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        
+    }
+    .corpo{
+    
+        display: flex;
+        align-items: center;
+        background-color: var(--branco)
+    }
+    .paragrafo{
+        text-align: center;
+        color: var(--preto);
+        font-family: 'Roboto', sans-serif;
+        width: 70%;
+        font-weight: 500;
+    
+    }
+    .botao{
+        font-weight: 600;
+        font-family: 'Roboto', sans-serif;
+        padding: 1rem 2rem 1rem 2rem;
+        border-radius: 0.4rem;
+        border-color: var(--rosa);
+        border-style: none;
+        color: var(--branco);
+        background-color: var(--rosa);
+    }
