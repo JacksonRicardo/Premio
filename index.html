@@ -60,10 +60,10 @@
         
         document.getElementById("btnTwitter").addEventListener("click", function() {
             // Compartilhar no Twitter
-            var twitterURL = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(this.getAttribute("data-url")) + "&text=" + encodeURIComponent("") + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
+            var twitterURL = "https://twitter.com/intent/tweet?text=" + encodeURIComponent("") + "&url=" + encodeURIComponent(this.getAttribute("data-url")) + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(twitterURL, "_blank");
         });
-               
+             
     </script>
 </body>
 </html>
