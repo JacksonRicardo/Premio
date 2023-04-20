@@ -25,6 +25,8 @@
     <meta name="twitter:title" content="Primeiro lugar">
     <meta name="twitter:description" content="Card do evento">
     <meta name="twitter:image" content="https://primeirolugar.netlify.app/imagens/senac_educação_inovadora_medalhas_Medalha_1_frente.png">
+    <meta name="twitter:image:width" content="1200">
+    <meta name="twitter:image:height" content="627">
     <meta name="twitter:url" content="https://primeirolugar.netlify.app">
     
     <title>Parabéns!</title>
@@ -60,9 +62,9 @@
         
         document.getElementById("btnTwitter").addEventListener("click", function() {
             // Compartilhar no Twitter
-            var twitterURL = "https://twitter.com/intent/tweet?text=" + encodeURIComponent("") + "&url=" + encodeURIComponent(this.getAttribute("data-url")) + "&media=" + encodeURIComponent(this.getAttribute("data-image"));
+            var twitterURL = "https://twitter.com/intent/tweet?text=" + encodeURIComponent("") + "&url=" + encodeURIComponent(this.getAttribute("data-url")) + "&card=summary_large_image" + "&image=" + encodeURIComponent(this.getAttribute("data-image"));
             window.open(twitterURL, "_blank");
-        });
+        });        
              
     </script>
 </body>
