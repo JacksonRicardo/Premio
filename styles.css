@@ -53,3 +53,15 @@
     background-color: var(--rosa);
   }
   
+  .botaoT {
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    padding: 1rem 3rem 1rem 2rem;
+    border-radius: 0.4rem;
+    border-color: var(--rosa);
+    border-style: none;
+    color: var(--branco);
+    background-color: var(--rosa);
+    text-align: center; /* adicionado para alinhar o texto ao centro */
+  }
+  
